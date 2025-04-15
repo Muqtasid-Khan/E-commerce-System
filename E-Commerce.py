@@ -17,8 +17,10 @@ class Product:
        self. reviews. append(review) 
         
 class Customer:
-    def __init__(self, name):
+    def __init__(self, name, email,address):
         self.name = name
+        self. email=email
+        self. address=address
         self.cart = ShoppingCart()
 
     def add_to_cart(self, product, quantity):
@@ -63,7 +65,7 @@ class Order:
          return f" Payment is successfully received by using {method}"
          
     # Example usage
-product1 = Product("Laptop", 1000, 5)
+product1 = Product("Laptop", 1000, 5,'anjad@gamil.com','Multan')
 print(product1. add_reviews ())    
 product2 = Product("Phone", 500, 10)
 print(product2. add_reviews ())
