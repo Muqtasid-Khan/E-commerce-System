@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - EstoreHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>EstoreHub</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="account.html">Account</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="cart-page">
+        <h2>Shopping Cart</h2>
+        <section class="cart-items">
+            <div class="cart-item">
+                <img src="images/laptop-thumbnail.jpg" alt="Laptop Thumbnail" class="item-image">
+                <div class="item-details">
+                    <h3>Laptop Model XYZ</h3>
+                    <p class="price">$1200</p>
+                    <div class="quantity-selector">
+                        <label for="quantity-1">Quantity:</label>
+                        <input type="number" id="quantity-1" name="quantity-1" value="1" min="1">
+                    </div>
+                    <button class="remove-item">Remove</button>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <img src="images/phone-thumbnail.jpg" alt="Phone Thumbnail" class="item-image">
+                <div class="item-details">
+                    <h3>Smartphone ABC</h3>
+                    <p class="price">$500</p>
+                    <div class="quantity-selector">
+                        <label for="quantity-2">Quantity:</label>
+                        <input type="number" id="quantity-2" name="quantity-2" value="2" min="1">
+                    </div>
+                    <button class="remove-item">Remove</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cart-summary">
+            <h3>Cart Summary</h3>
+            <p>Subtotal: $2200</p>
+            <p>Shipping: $10 (Placeholder)</p>
+            <p class="total">Total: $2210</p>
+            <button class="checkout-button">Proceed to Checkout</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 EstoreHub - Your Online Marketplace</p>
+    </footer>
+</body>
+</html>
