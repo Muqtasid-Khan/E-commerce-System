@@ -3,174 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EstoreHub - Your Online Marketplace</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <style>
-        /* Basic CSS - You'll likely want to move this to a separate CSS file (style.css) */
-        body {
-            font-family: sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1em 0;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        header h1 {
-            margin: 0;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 10px 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5em 1em;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        nav a:hover {
-            background-color: #555;
-        }
-        main {
-            display: flex;
-            gap: 20px;
-        }
-        .product-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-        .product-card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-        }
-        .product-card img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-            border-radius: 5px;
-        }
-        .product-card h3 {
-            margin-top: 0;
-            color: #333;
-        }
-        .product-details {
-            margin-bottom: 10px;
-            flex-grow: 1;
-        }
-        .price {
-            color: green;
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-        .stock {
-            color: orange;
-            font-size: 0.9em;
-        }
-        .category {
-            color: #777;
-            font-style: italic;
-            font-size: 0.9em;
-        }
-        .reviews-section {
-            margin-top: 10px;
-            font-size: 0.8em;
-            color: #555;
-        }
-        .reviews-section h4 {
-            margin-top: 5px;
-        }
-        .review-item {
-            border-top: 1px solid #eee;
-            padding-top: 5px;
-            margin-top: 5px;
-        }
-        .add-to-cart {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .add-to-cart:hover {
-            background-color: #0056b3;
-        }
-        .sidebar {
-            background-color: #f8f9fa;
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 8px;
-            width: 300px;
-        }
-        .customer-info h2, .cart-info h2, .order-summary h2 {
-            color: #555;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 0.5em;
-            margin-bottom: 1em;
-        }
-        .cart-item {
-            border-bottom: 1px dashed #ccc;
-            padding-bottom: 10px;
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .cart-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        .order-summary {
-            background-color: #d1e7dd;
-            color: #0f5132;
-            padding: 15px;
-            border-radius: 8px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 1em 0;
-            background-color: #333;
-            color: white;
-            border-radius: 5px;
-        }
-    </style>
+    <title>Muqtasid Khan - E-commerce System Professional Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
-        <h1>EstoreHub</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Categories</a> </li>
-                <li><a href="#">Cart (2)</a></li> <li><a href="#">Account</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="MK Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section class="product-list">
-            <article class="product-card">
-                <img src="laptop.jpg" alt="
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Building Innovative E-commerce Solutions</h1>
+                <p>Passionate about creating efficient and user-friendly online shopping experiences.</p>
+                <a href="#projects" class="button primary-button">View My Projects</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-image.png" alt="E-commerce Illustration">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/profile.jpg" alt="My Profile Picture">
+                </div>
+                <div class="about-text">
+                    <p>Hello! My name is Muqtasid Khan, and I am a developer with a strong interest in building robust and scalable e-commerce systems. Based in Multan, Punjab, Pakistan, I am dedicated to crafting digital solutions that are both functional and provide a seamless user experience.</p>
+                    <p>My background includes understanding the core principles of e-commerce, from product management and customer interaction to shopping carts and order processing. The Python code you provided earlier reflects my approach to system design, focusing on clear object-oriented principles.</p>
+                    <p>I am continuously learning and exploring new technologies to enhance my skills and deliver cutting-edge solutions for online businesses.</p>
+                    <a href="#contact" class="button secondary-button">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">My Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>E-commerce Development</h3>
+                    <p>Building custom e-commerce platforms tailored to your specific business needs.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-code"></i>
+                    <h3>Backend Development</h3>
+                    <p>Creating the server-side logic and databases to power your e-commerce store.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-user-cog"></i>
+                    <h3>System Design & Architecture</h3>
+                    <p>Designing scalable and efficient architectures for complex e-commerce systems.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-database"></i>
+                    <h3>Database Management</h3>
+                    <p>Designing and managing databases to ensure data integrity and performance.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>API Integration</h3>
+                    <p>Integrating third-party services like payment gateways and shipping providers.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-tools"></i>
+                    <h3>Maintenance & Support</h3>
+                    <p>Providing ongoing support and maintenance for your e-commerce platform.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects section-padding">
+        <div class="container">
+            <h2 class="section-title">My Recent Projects</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <img src="images/project1.jpg" alt="Project 1">
+                    <div class="project-info">
+                        <h3>Custom Online Store</h3>
+                        <p>A bespoke e-commerce platform with integrated payment and shipping.</p>
+                        <a href="#" class="button small-button">View Details</a>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="images/project2.jpg" alt="Project 2">
+                    <div class="project-info">
+                        <h3>Inventory Management System</h3>
+                        <p>A system to efficiently track and manage product stock levels.</p>
+                        <a href="#" class="button small-button">View Details</a>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="images/project3.jpg" alt="Project 3">
+                    <div class="project-info">
+                        <h3>Customer Relationship Management (CRM) for E-commerce</h3>
+                        <p>A tool to manage customer interactions and improve engagement.</p>
+                        <a href="#" class="button small-button">View Details</a>
+                    </div>
+                </div>
+                </div>
+            <div class="view-more">
+                <a href="#" class="button secondary-button">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="button primary-button">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3>My Contact Details</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Multan, Punjab, Pakistan</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+92XXXXXXXXXX">+92 XXXXXXXXXX</a></p>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Muqtasid Khan. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
