@@ -10,52 +10,229 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+            z-index: 11;
+        }
+
+        #nav-links {
+            transition: max-height 0.3s ease-out;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 80px;
+                right: 20px;
+                padding: 10px;
+                border-radius: 8px;
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+                transition: max-height 0.4s ease, opacity 0.3s ease;
+                z-index: 10;
+            }
+
+            nav ul.show {
+                max-height: 500px;
+                opacity: 1;
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="Images/MK Logo.jpg" alt="MK Logo" style="height:100px; width:auto;">
-                </a>
-            </div>
-            <nav class="navbar">
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html"><img src="Images/MK Logo.jpg" alt="MK Logo" style="height:250px;width:250px;"></a>
         </div>
-    </header>
-
-    <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Building Innovative E-commerce Solutions</h1>
-                <p>Passionate about creating efficient and user-friendly online shopping experiences.</p>
-                <a href="#projects" class="button primary-button">View My Projects</a>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
             </div>
-            <br/>
-            <div class="hero-image">
-                <img src="Images/E-commerce Illustration.jpg" alt="E-commerce Illustration" style="height:250px;width:250px;">
+        </nav>
+    </div>
+</header>
+
+<section id="hero" class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Building Innovative E-commerce Solutions</h1>
+            <p>Passionate about creating efficient and user-friendly online shopping experiences.</p>
+            <a href="#projects" class="button primary-button">View My Projects</a>
+        </div>
+        <br/>
+        <div class="hero-image">
+            <img src="Images/E-commerce Illustration.jpg" alt="E-commerce Illustration" style="height:250px;width:250px;">
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about section-padding">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="Images/Muqtasid Khan.jpg" alt="My Profile Picture" style="height:250px;width:250px;">
+            </div>
+            <div class="about-text">
+                <p>Hello! My name is Muqtasid Khan, and I am a developer with a strong interest in building robust and scalable e-commerce systems. Based in Multan, Punjab, Pakistan, I am dedicated to crafting digital solutions that are both functional and provide a seamless user experience.</p>
+                <p>My background includes understanding the core principles of e-commerce, from product management and customer interaction to shopping carts and order processing. The Python code you provided earlier reflects my approach to system design, focusing on clear object-oriented principles.</p>
+                <p>I am continuously learning and exploring new technologies to enhance my skills and deliver cutting-edge solutions for online businesses.</p>
+                <a href="#contact" class="button secondary-button">Get In Touch</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="about" class="about section-padding">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="Images/Muqtasid Khan.jpg" alt="My Profile Picture" style="height:250px;width:250px;">
+<section id="services" class="services section-padding bg-light">
+    <div class="container">
+        <h2 class="section-title">My Services</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>E-commerce Development</h3>
+                <p>Building custom e-commerce platforms tailored to your specific business needs.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-code"></i>
+                <h3>Backend Development</h3>
+                <p>Creating the server-side logic and databases to power your e-commerce store.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-user-cog"></i>
+                <h3>System Design & Architecture</h3>
+                <p>Designing scalable and efficient architectures for complex e-commerce systems.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-database"></i>
+                <h3>Database Management</h3>
+                <p>Designing and managing databases to ensure data integrity and performance.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-sync-alt"></i>
+                <h3>API Integration</h3>
+                <p>Integrating third-party services like payment gateways and shipping providers.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-tools"></i>
+                <h3>Maintenance & Support</h3>
+                <p>Providing ongoing support and maintenance for your e-commerce platform.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="projects section-padding">
+    <div class="container">
+        <h2 class="section-title">My Recent Projects</h2>
+        <div class="projects-grid">
+            <div class="project-item">
+                <img src="images/project1.jpg" alt="Project 1">
+                <div class="project-info">
+                    <h3>Custom Online Store</h3>
+                    <p>A bespoke e-commerce platform with integrated payment and shipping.</p>
+                    <a href="#" class="button small-button">View Details</a>
                 </div>
-                <div class="about-text">
-                    <p>Hello! My name is Muqtasid Khan, and I am a developer with a strong interest in building robust and scalable e-commerce systems. Based in Multan, Punjab, Pakistan, I am dedicated to crafting digital solutions that are both functional and provide a seamless user experience.</p>
-                    <p>My background includes understanding the core principles of e-commerce, from product management and customer interaction to shopping carts and order processing. The Python code you provided earlier reflects my approach to system design, focusing on clear object-oriented principles.</p>
-                    <p>I am continuously learning and exploring new technologies to enhance my skills and deliver cutting-edge solutions for online
+            </div>
+            <div class="project-item">
+                <img src="images/project2.jpg" alt="Project 2">
+                <div class="project-info">
+                    <h3>Inventory Management System</h3>
+                    <p>A system to efficiently track and manage product stock levels.</p>
+                    <a href="#" class="button small-button">View Details</a>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="images/project3.jpg" alt="Project 3">
+                <div class="project-info">
+                    <h3>Customer Relationship Management (CRM) for E-commerce</h3>
+                    <p>A tool to manage customer interactions and improve engagement.</p>
+                    <a href="#" class="button small-button">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="view-more">
+            <a href="#" class="button secondary-button">View All Projects</a>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact section-padding bg-light">
+    <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-form">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="button primary-button">Send Message</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <h3>My Contact Details</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Multan, Punjab, Pakistan</p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+92XXXXXXXXXX">+92 XXXXXXXXXX</a></p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Muqtasid Khan. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById("nav-links");
+        navLinks.classList.toggle("show");
+    }
+
+    document.querySelectorAll("#nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            document.getElementById("nav-links").classList.remove("show");
+        });
+    });
+</script>
+
+<script src="js/script.js"></script>
+</body>
+</html>
