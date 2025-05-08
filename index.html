@@ -1,20 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="Images/mk.png" type="image/x-icon">
-    <meta charset="UTF-8">
+    <link rel="icon" href="/Images/mk.png" type="image/png"> <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muqtasid Khan - E-commerce System Professional Website</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Muqtasid Khan - E-commerce System Professional</title> <meta name="description" content="Professional portfolio of Muqtasid Khan, an expert in building innovative e-commerce solutions. View my projects and get in touch."> <meta name="keywords" content="e-commerce, portfolio, web development, Muqtasid Khan, projects, contact"> <meta name="author" content="Muqtasid Khan"> <link rel="canonical" href="https://yourdomain.com/"> <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        nav {
+        /* --- Enhanced Global Styles --- */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8; /* Light and clean background */
+            color: #333; /* Dark, readable text */
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px; /* Standard professional container width */
+            margin: 0 auto;
+            padding: 20px; /* Consistent padding */
+        }
+
+        .section-padding {
+            padding: 60px 0; /* Increased padding for better visual separation */
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            color: #2c3e50; /* Dark, professional heading color */
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #007bff; /* Accent color for visual interest */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        .primary-button {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .primary-button:hover {
+            background-color: #0056b3;
+        }
+
+        .secondary-button {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .secondary-button:hover {
+            background-color: #545b62;
+        }
+
+        .small-button {
+            padding: 8px 16px;
+            font-size: 0.9em;
+        }
+
+        /* --- Header Styles --- */
+        header {
+            background-color: #343a40; /* Dark, professional header background */
+            color: white;
+            padding: 20px 0;
+            position: sticky; /* Sticky header for better navigation */
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
             display: flex;
+            justify-content: space-between;
             align-items: center;
+        }
+
+        .logo a {
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 250px; /* Consistent logo height */
+            width: auto;
+            
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li:first-child {
+            margin-left: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff; /* Accent color on hover */
         }
 
         .hamburger {
@@ -29,30 +152,268 @@
             transition: max-height 0.3s ease-out;
         }
 
+        /* --- Hero Section --- */
+        #hero {
+            background-color: #e9ecef; /* Light gray for contrast */
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        #hero .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-content {
+            margin-bottom: 40px;
+            max-width: 700px;
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 300px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- Projects Section --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .project-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        .project-info p {
+            color: #555;
+            font-size: 1em;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .view-more {
+            text-align: center;
+        }
+
+        /* --- Contact Section --- */
+        .contact-form, .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-form form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+
+        .contact-info p {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #0056b3;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            font-size: 1.5em;
+            color: #555;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #007bff;
+        }
+
+        /* --- Footer Styles --- */
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9em;
+            border-top: 1px solid #495057;
+        }
+
+        footer .container {
+            padding: 20px;
+        }
+
+        /* --- Responsive Styles --- */
         @media (max-width: 768px) {
-            nav ul {
-                display: flex;
+            .container {
+                padding: 15px;
+            }
+
+            .section-padding {
+                padding: 40px 0;
+            }
+
+            .section-title {
+                font-size: 2em;
+                margin-bottom: 30px;
+            }
+
+            header .container {
                 flex-direction: column;
-                background-color: #333;
+                align-items: flex-start;
+            }
+
+            .logo {
+                margin-bottom: 15px;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: rgba(52, 58, 64, 0.9); /* Dark background for mobile nav */
                 position: absolute;
-                top: 80px;
-                right: 20px;
+                top: 100%; /* Adjust based on header height */
+                left: 0;
+                right: 0;
                 padding: 10px;
-                border-radius: 8px;
-                overflow: hidden;
-                max-height: 0;
-                opacity: 0;
-                transition: max-height 0.4s ease, opacity 0.3s ease;
-                z-index: 10;
+                border-radius: 0 0 8px 8px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             }
 
             nav ul.show {
-                max-height: 500px;
-                opacity: 1;
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 15px 0;
+                margin-left: 0;
+                text-align: center;
             }
 
             .hamburger {
                 display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+
+            #hero {
+                padding: 80px 0;
+            }
+
+            #hero .container {
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5em;
+            }
+
+            .hero-content p {
+                font-size: 1.1em;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                text-align: center;
+                margin-top: 30px;
             }
         }
     </style>
@@ -62,17 +423,13 @@
 <header>
     <div class="container">
         <div class="logo">
-            <a href="index.html"><img src="Images/MK Logo.jpg" alt="MK Logo" style="height:250px;width:250px;"></a>
-        </div>
+            <a href="/"> <img src="Images/mk.png" alt="Muqtasid Khan Logo"></a> </div>
         <nav>
             <ul id="nav-links">
-                <li> <a href="EstoreHub.html"> EstoreHub </a> </li>
-               
-                <li> <a href="about.html"> About Us </a> </li>
-                 <li><a href="#services">Services</a></li>
+                <li><a href="EstoreHub.html">EstoreHub</a></li> <li>
+                <a href="about.html">About Us</a></li> <li><a href="#services">Services</a></li>
                 <li><a href="#projects">Projects</a></li>
-                
-            </ul>
+                <li><a href="#contact">Contact</a></li> </ul>
             <div class="hamburger" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </div>
@@ -83,87 +440,106 @@
 <section id="hero" class="hero">
     <div class="container">
         <div class="hero-content">
-            <h1>Building Innovative E-commerce Solutions</h1>
-            <p>Passionate about creating efficient and user-friendly online shopping experiences.</p>
-            <a href="#projects" class="button primary-button">View My Projects</a>
-        </div>
-        <br/>
+            <h1>Crafting Exceptional E-commerce Experiences</h1> <p>A dedicated professional passionate about developing robust, user-centric e-commerce systems that drive growth and engagement.</p> <a href="#projects" class="button primary-button">Explore My Work</a> </div>
         <div class="hero-image">
-            <img src="Images/E-commerce Illustration.jpg" alt="E-commerce Illustration" style="height:250px;width:250px;">
+            <img src="Images/E-commerce Illustration.jpg" alt="E-commerce Solutions"> </div>
+    </div>
+</section>
+
+<section id="services" class="services section-padding bg-light">
+    <div class="container">
+        <h2 class="section-title">My Expertise</h2> <div class="services-grid">
+            <div class="service-item">
+                <i class="fas fa-code fa-3x mb-2 text-primary"></i> <h3>E-commerce Development</h3>
+                <p>Building scalable and secure online stores tailored to your unique business needs.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-shopping-cart fa-3x mb-2 text-success"></i> <h3>Platform Integration</h3>
+                <p>Seamless integration of payment gateways, shipping providers, and other essential services.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-rocket fa-3x mb-2 text-warning"></i> <h3>Performance Optimization</h3>
+                <p>Ensuring your e-commerce platform is fast, responsive, and optimized for conversions.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-mobile-alt fa-3x mb-2 text-info"></i> <h3>Mobile-First Design</h3>
+                <p>Creating responsive designs that provide an optimal experience across all devices.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-chart-line fa-3x mb-2 text-danger"></i> <h3>Analytics & Reporting</h3>
+                <p>Implementing tools to track key metrics and provide insights for business growth.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-life-ring fa-3x mb-2 text-secondary"></i> <h3>Ongoing Support & Maintenance</h3>
+                <p>Providing reliable support and maintenance to ensure your platform runs smoothly.</p>
+            </div>
         </div>
     </div>
 </section>
+
 <section id="projects" class="projects section-padding">
     <div class="container">
-        <h2 class="section-title">My Recent Projects</h2>
+        <h2 class="section-title">Recent Projects</h2>
         <div class="projects-grid">
             <div class="project-item">
-                <img src="images/project1.jpg" alt="Project 1">
+                <img src="/images/project1.jpg" alt="Custom Online Store">
                 <div class="project-info">
-                    <h3>Custom Online Store</h3>
-                    <p>A bespoke e-commerce platform with integrated payment and shipping.</p>
-                    <a href="#" class="button small-button">View Details</a>
+                    <h3>Bespoke E-commerce Platform</h3>
+                    <p>Developed a fully customized online store with integrated payment processing and shipping logistics for a local retailer.</p>
+                    <a href="#" class="button small-button">View Details <i class="fas fa-arrow-right ml-1"></i></a>
                 </div>
             </div>
             <div class="project-item">
-                <img src="images/project2.jpg" alt="Project 2">
+                <img src="/images/project2.jpg" alt="Inventory Management System">
                 <div class="project-info">
-                    <h3>Inventory Management System</h3>
-                    <p>A system to efficiently track and manage product stock levels.</p>
-                    <a href="#" class="button small-button">View Details</a>
+                    <h3>Scalable Inventory Management System</h3>
+                    <p>Designed and implemented an inventory tracking system to optimize stock levels and reduce operational inefficiencies.</p>
+                    <a href="#" class="button small-button">View Details <i class="fas fa-arrow-right ml-1"></i></a>
                 </div>
             </div>
             <div class="project-item">
-                <img src="images/project3.jpg" alt="Project 3">
+                <img src="/images/project3.jpg" alt="E-commerce CRM Integration">
                 <div class="project-info">
-                    <h3>Customer Relationship Management (CRM) for E-commerce</h3>
-                    <p>A tool to manage customer interactions and improve engagement.</p>
-                    <a href="#" class="button small-button">View Details</a>
+                    <h3>Customer Engagement CRM for Online Sales</h3>
+                    <p>Integrated a CRM solution to enhance customer interactions, personalize marketing efforts, and improve retention rates.</p>
+                    <a href="#" class="button small-button">View Details <i class="fas fa-arrow-right ml-1"></i></a>
                 </div>
             </div>
-        </div>
+            </div>
         <div class="view-more">
-            <a href="#" class="button secondary-button">View All Projects</a>
+            <a href="#" class="button secondary-button">View All Projects <i class="fas fa-eye ml-1"></i></a>
         </div>
     </div>
 </section>
 
 <section id="contact" class="contact section-padding bg-light">
     <div class="container">
-        <h2 class="section-title">Contact Me</h2>
+        <h2 class="section-title">Get In Touch</h2>
         <div class="contact-form">
             <form action="#" method="POST">
                 <div class="form-group">
-                    <label for="name">Name</label>
+                    <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
+                    <label for="email">Your Email</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Message</label>
+                    <label for="message">Your Message</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
-                <button type="submit" class="button primary-button">Send Message</button>
+                <button type="submit" class="button primary-button">Send Message <i class="fas fa-paper-plane ml-1"></i></button>
             </form>
         </div>
-        <div class="contact-info">
-            <h3>My Contact Details</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Multan, Punjab, Pakistan</p>
-            <p><i class="fas fa-envelope"></i> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            <p><i class="fas fa-phone"></i> <a href="tel:+92XXXXXXXXXX">+92 XXXXXXXXXX</a></p>
-            <div class="social-links">
-                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-        </div>
+        
     </div>
 </section>
 
 <footer>
     <div class="container">
         <p>&copy; 2025 Muqtasid Khan. All Rights Reserved.</p>
+        <p>Designed & Developed by Muqtasid Khan</p>
     </div>
 </footer>
 
@@ -180,7 +556,9 @@
     });
 </script>
 
-<script src="js/script.js"></script>
+<script src="/js/script.js"></script>
 
 </body>
 </html>
+
+            
