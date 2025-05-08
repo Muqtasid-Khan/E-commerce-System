@@ -1,10 +1,227 @@
-<nav></nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="cart.html">Cart</a></li>
-        <li><a href="account.html">Account</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="about.html">About Us</a></li>
-    </ul>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - EstoreHub</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Open Sans', sans-serif; /* A clean and readable font */
+            line-height: 1.8;
+            color: #4a4a4a; /* Dark gray for better readability */
+            background-color: #f9f9f9; /* Light gray background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 12px; /* More rounded corners */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Softer shadow */
+            padding: 60px; /* More generous padding */
+            width: 90%;
+            max-width: 1000px; /* Slightly wider max-width */
+            margin: 40px;
+        }
+
+        .section {
+            margin-bottom: 50px; /* Increased spacing between sections */
+            padding-bottom: 40px;
+            border-bottom: 2px solid #e0e0e0; /* Lighter border */
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        h2 {
+            color: #2c3e50; /* Dark blue-gray for headings */
+            margin-top: 0;
+            margin-bottom: 30px; /* More space below heading */
+            font-size: 2.5em;
+            font-weight: 700; /* Bold heading */
+            text-align: left;
+            border-bottom: 4px solid #5dade2; /* Vibrant blue accent */
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+
+        p {
+            color: #5e5e5e; /* Slightly lighter dark gray */
+            margin-bottom: 20px;
+            font-size: 1.15em;
+            line-height: 2; /* Increased line height for better readability */
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+        ul li {
+            padding-left: 1.5em;
+            margin-bottom: 10px;
+            position: relative;
+            font-size: 1.15em;
+            color: #5e5e5e;
+        }
+
+        ul li::before {
+            content: "\2713"; /* Checkmark icon */
+            color: #5dade2; /* Vibrant blue accent */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Team Section */
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+            gap: 30px;
+            align-items: center;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 25px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-member img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member h3 {
+            color: #34495e; /* Another dark blue-gray */
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+        .team-member p {
+            color: #777;
+            font-size: 1em;
+            margin-bottom: 0;
+        }
+
+        /* Contact Section */
+        .contact-info li {
+            margin-bottom: 15px;
+        }
+
+        .contact-info li a {
+            color: #5dade2; /* Vibrant blue for links */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info li a:hover {
+            color: #3a7bd5; /* Darker blue on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                margin: 20px;
+                padding: 40px;
+            }
+
+            h2 {
+                font-size: 2.2em;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+            }
+
+            p {
+                font-size: 1.1em;
+            }
+
+            ul li {
+                font-size: 1.1em;
+            }
+
+            .team {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 20px;
+            }
+
+            .team-member img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <section class="section intro">
+            <h2>About Us</h2>
+            <p>We didn't just build an e-commerce website; we ignited a passion for online shopping! Fueled by a shared vision and a deeply collaborative spirit, our team came together with boundless energy and created EstoreHub. Born from a desire to offer innovative and user-friendly e-commerce solutions, every aspect of our platform reflected our unwavering commitment and active involvement. We believed in crafting seamless online experiences that empowered both buyers and sellers. This wasn't just a website to us – it was a testament to what could be achieved when dedication met a collective dream. Join us as we continue to evolve and redefine the future of online commerce, driven by our passion and your trust.</p>
+            <p>Our focus was on creating a platform where finding what you need is effortless, and every interaction is smooth and enjoyable.</p>
+        </section>
+
+        <section class="section values">
+            <h2>Our Key Values</h2>
+            <p>At the heart of EstoreHub lies a deep commitment to you, our customer. We believe that your online shopping experience should be seamless, enjoyable, and tailored to your needs. From the moment you land on our site to the delivery of your order and beyond, we prioritize providing exceptional service and support. We actively listen to your feedback and continuously strive to understand and anticipate your requirements, ensuring that every interaction with EstoreHub is positive and valuable.</p>
+            <ul>
+                <li>Customer-Centricity</li>
+                <li>User Experience</li>
+                <li>Satisfaction</li>
+            </ul>
+        </section>
+
+        <section class="section team">
+            <h2>Our Team</h2>
+            <div class="team">
+                <div class="team-member">
+                    <img src="Images/Muqtasid Khan.jpg" alt="Muqtasid Khan">
+                    <h3>Muqtasid Khan</h3>
+                    <p>Director</p>
+                </div>
+                <div class="team-member">
+                    <img src="Images/Joseph Robinson.png" alt="Team Member 2">
+                    <h3>Team Member 2</h3>
+                    <p>H.R</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact">
+            <h2>Contact Us</h2>
+            <p>Any Query</p>
+            <ul class="contact-info">
+                <li>Email: <a href="mailto:muqtasidkhan207@gmail.com">muqtasidkhan207@gmail.com</a></li>
+                <li>Phone: +92 3087154709</li>
+                <li>Location: Baloch House Muhallah Noori Masjid Nawad Nursery Road Post Office Ismail Abad District Multan</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/mk.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstoreHub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f4f6f8; /* Light, professional background */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
+        .container {
+            max-width: 1280px; /* Slightly wider for more visual space */
+            margin: 60px auto; /* Increased top/bottom margin */
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Deeper, softer shadow */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between; /* Space out logo and navigation */
+            align-items: center;
+            padding: 25px 0;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #e0e0e0;
+            background-color: #f8f9fa; /* Light gray background for better contrast */
+        }
+
+        .EstoreHub-image {
+            display: flex;
+            align-items: center;
+        }
+
+        .EstoreHub-image img {
+            height: 60px; /* Refined logo size */
+            width: auto;
+            margin-right: 15px;
+        }
+
+        .EstoreHub-image h1 {
+            margin: 0;
+            font-size: 2.2em;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #2c3e50; /* Dark, professional color */
+            letter-spacing: -0.5px;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 30px;
+        }
+
+        header nav ul li:first-child {
+            margin-left: 0;
+        }
+
+        header nav ul li a {
+            color: #495057; /* Slightly darker nav link color */
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+        }
+
+        header nav ul li a:hover {
+            color: #007bff; /* Modern, vibrant hover color */
+        }
+
+        main.product-detail-page {
+            padding: 30px 0;
+        }
+
+        .product-overview {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr; /* More space for product info */
+            gap: 50px;
+            margin-bottom: 60px;
+            align-items: flex-start;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            overflow: hidden; /* For smoother rounded corners */
+        }
+
+        .product-info h2 {
+            color: #282828;
+            font-size: 2.6em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.8px;
+        }
+
+        .product-info .price {
+            color: #2ecc71; /* Professional green for price */
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .product-info .stock {
+            color: #888;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .product-info .stock strong {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .product-info .stock.out-of-stock strong {
+            color: #e74c3c; /* Professional red for out of stock */
+        }
+
+        .product-info .category {
+            color: #777;
+            font-size: 1em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .product-info .description {
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .quantity-selector label {
+            margin-right: 15px;
+            font-weight: 500;
+            color: #333;
+            font-size: 1.1em;
+        }
+
+        .quantity-selector input[type="number"] {
+            width: 100px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+            text-align: center;
+            appearance: none; /* Remove default number input arrows */
+        }
+
+        .add-to-cart {
+            background-color: #007bff; /* Modern, vibrant button color */
+            color: #fff;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.15em;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+        }
+
+        .add-to-cart:hover {
+            background-color: #0056b3;
+        }
+
+        .product-specifications,
+        .customer-reviews {
+            padding: 30px;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            background-color: #f9f9f9;
+        }
+
+        .product-specifications h3,
+        .customer-reviews h3 {
+            color: #282828;
+            font-size: 1.8em;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 12px;
+        }
+
+        .product-specifications ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .product-specifications ul li {
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .product-specifications ul li strong {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .product-specifications ul li:last-child {
+            border-bottom: none;
+        }
+
+        .customer-reviews .review-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+        }
+
+        .customer-reviews .review-item .rating {
+            color: #ffc107; /* Professional gold for ratings */
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+
+        .customer-reviews .review-item .author {
+            color: #777;
+            font-size: 0.95em;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .customer-reviews .review-item .comment {
+            color: #444;
+            line-height: 1.7;
+            font-size: 1.05em;
+        }
+
+        .customer-reviews button {
+            background-color: #6c757d; /* Professional gray for secondary button */
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .customer-reviews button:hover {
+            background-color: #545b62;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #343a40; /* Darker background for the footer */
+            color: #f8f9fa; /* Light text color for the footer */
+            font-size: 0.9em;
+            border-top: 1px solid #495057;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                margin: 40px auto;
+                padding: 30px;
+            }
+
+            .product-overview {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .product-image {
+                max-width: 70%;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            header nav ul {
+                margin-top: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header nav ul li {
+                margin-left: 0;
+                margin-bottom: 15px;
+            }
+
+            header nav ul li:last-child {
+                margin-bottom: 0;
+            }
+
+            .product-image {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="EstoreHub-image">
+                <img src="Images/EstoreHub.jpg" alt="EstoreHub">
+                <h1><b>EstoreHub</b></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="product-detail-page">
+            <section class="product-overview">
+                <img src="images/Laptop Model XYZ.jfif" alt="Detailed Laptop Image" class="product-image">
+                <div class="product-info">
+                    <h2>Laptop Model XYZ</h2>
+                    <p class="price">$1200</p>
+                    <p class="stock">Stock: <strong>3</strong></p>
+                    <p class="category">Electronics</p>
+                    <p class="description">
+                        This is a detailed description of the <strong>Laptop Model XYZ</strong>. It boasts a <strong>powerful processor</strong>, ample <strong>RAM</strong>, and a <strong>high-resolution display</strong>. Perfect for professionals and gamers alike.
+                    </p>
+                    <div class="quantity-selector">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" value="1" min="1">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </section>
+
+            <section class="product-specifications">
+                <h3>Specifications</h3>
+                <ul>
+                    <li><strong>Processor:</strong> Intel Core i7</li>
+                    <li><strong>RAM:</strong> 16GB DDR4</li>
+                    <li><strong>Storage:</strong> 1TB SSD</li>
+                    <li><strong>Display:</strong> 15.6-inch Full HD</li>
+                </ul>
+            </section>
+
+            <section class="customer-reviews">
+                <h3>Customer Reviews</h3>
+                <div class="review-item">
+                    <p class="rating">★★★★★</p>
+                    <p class="author">John Doe</p>
+                    <p class="comment">Great laptop! Fast and reliable.</p>
+                </div>
+                <div class="review-item">
+                    <p class="rating">★★★★☆</p>
+                    <p class="author">Jane Smith</p>
+                    <p class="comment">Good value for the price.</p>
+                </div>
+                <button>Read All Reviews</button>
+            </section>
+
+            <hr style="border-top: 2px solid #eee; margin: 60px 0;">
+
+            <section class="product-overview">
+                <img src="images/Professional DSLR Camera.jpg" alt="Detailed Camera Image" class="product-image">
+                <div class="product-info">
+                    <h2>Professional DSLR Camera</h2>
+                    <p class="price">$1800</p>
+                    <p class="stock">Stock: <strong>8</strong></p>
+                    <p class="category">Photography</p>
+                    <p class="description">
+                        Capture stunning photos and videos with this <strong>Professional DSLR Camera</strong>. Featuring a high-resolution sensor and versatile lens options, it's perfect for enthusiasts and professionals.
+                    </p>
+                    <div class="quantity-selector">
+                        <label for="quantity-camera">Quantity:</label>
+                        <input type="number" id="quantity-camera" name="quantity-camera" value="1" min="1">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </section>
+
+            <section class="product-specifications">
+                <h3>Specifications</h3>
+                <ul>
+                    <li><strong>Sensor:</strong> 30.4MP Full-Frame CMOS</li>
+                    <li><strong>ISO Range:</strong> 100-32000</li>
+                    <li><strong>Video Recording:</strong> 4K UHD</li>
+                    <li><strong>Lens Mount:</strong> EF</li>
+                </ul>
+            </section>
+
+            <section class="customer-reviews">
+                <h3>Customer Reviews</h3>
+                <div class="review-item">
+                    <p class="rating">★★★★★</p>
+                    <p class="author">Samantha Green</p>
+                    <p class="comment">Excellent camera! Takes amazing photos.</p>
+                </div>
+                <button>Read All Reviews</button>
+            </section>
+
+            <hr style="border-top: 2px solid #eee; margin: 60px 0;">
+
+            <section class="product-overview">
+                <img src="Images/Premium Smartwatch X.jpg" alt="Detailed Smartwatch Image" class="product-image">
+                <div class="product-info">
+                    <h2>Premium Smartwatch X</h2>
+                    <p class="price">$450</p>
+                    <p class="stock">Stock: <strong>12</strong></p>
+                    <p class="category">Wearables</p>
+                    <p class="description">
+                        Stay connected and track your health with the <strong>Premium Smartwatch X</strong>. Features a vibrant AMOLED display, advanced fitness tracking, and seamless smartphone integration.
+                    </p>
+                    <div class="quantity-selector">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity-watch" name="quantity-watch" value="1" min="1">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </section>
+
+            <section class="product-specifications">
+                <h3>Specifications</h3>
+                <ul>
+                    <li><strong>Display:</strong> AMOLED Touchscreen</li>
+                    <li><strong>Battery Life:</strong> Up to 7 days</li>
+                    <li><strong>Water Resistance:</strong> 50 meters</li>
+                    <li><strong>Connectivity:</strong> Bluetooth 5.0</li>
+                </ul>
+            </section>
+
+            <section class="customer-reviews">
+                <h3>Customer Reviews</h3>
+                <div class="review-item">
+                    <p class="rating">★★★★★</p>
+                    <p class="author">David Lee</p>
+                    <p class="comment">Love this smartwatch! Great features and battery life.</p>
+                </div>
+                <button>Read All Reviews</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 EstoreHub. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
