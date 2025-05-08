@@ -104,3 +104,10 @@ footer {
     padding: 1em 0;
     margin-top: 40px; /* Add some space above the footer */
 }
+
+/* === Custom Image Style === */
+.profile-img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}
