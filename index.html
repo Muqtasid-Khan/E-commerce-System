@@ -12,222 +12,229 @@
     <style>
         /* --- Enhanced Global Styles --- */
         body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f6f8; /* Light and clean background */
-            color: #333; /* Dark, readable text */
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8; /* Light and clean background */
+    color: #333; /* Dark, readable text */
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Add background image here */
+    background-image: url('your-image.jpg'); /* Replace 'your-image.jpg' with the actual path to your image */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Optional: Make the background image fixed during scrolling */
+}
 
-        .container {
-            max-width: 1200px; /* Standard professional container width */
-            margin: 0 auto;
-            padding: 20px; /* Consistent padding */
-        }
+.container {
+    max-width: 1200px; /* Standard professional container width */
+    margin: 0 auto;
+    padding: 20px; /* Consistent padding */
+    /* Optional: Add a background color with some transparency for better readability over the image */
+    /* background-color: rgba(244, 246, 248, 0.8); */
+}
 
-        /* --- Header Styles --- */
-        header {
-            background-color: #343a40; /* Dark, professional header background */
-            color: white;
-            padding: 20px 0;
-           /* position: sticky; /* Sticky header for better navigation */
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+/* --- Header Styles --- */
+header {
+    background-color: #343a40; /* Dark, professional header background */
+    color: white;
+    padding: 20px 0;
+   /* position: sticky; /* Sticky header for better navigation */
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .logo a {
-            text-decoration: none;
-        }
+.logo a {
+    text-decoration: none;
+}
 
-        .logo img {
-            height: 250px; /* Consistent logo height */
-            width: auto;
-            
-        }
+.logo img {
+    height: 250px; /* Consistent logo height */
+    width: auto;
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
+}
 
-        nav ul li {
-            margin-left: 25px;
-        }
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
 
-        nav ul li:first-child {
-            margin-left: 0;
-        }
+nav ul li {
+    margin-left: 25px;
+}
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1em;
-            font-weight: 400;
-            transition: color 0.3s ease;
-        }
+nav ul li:first-child {
+    margin-left: 0;
+}
 
-        nav ul li a:hover {
-            color: #007bff; /* Accent color on hover */
-        }
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
 
-        .hamburger {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: white;
-            z-index: 11;
-        }
+nav ul li a:hover {
+    color: #007bff; /* Accent color on hover */
+}
 
-        #nav-links {
-            transition: max-height 0.3s ease-out;
-        }
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    z-index: 11;
+}
 
-        /* --- Hero Section --- */
-        #hero {
-            background-color: #e9ecef; /* Light gray for contrast */
-            padding: 100px 0;
-            text-align: center;
-        }
+#nav-links {
+    transition: max-height 0.3s ease-out;
+}
 
-        #hero .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+/* --- Hero Section --- */
+#hero {
+    background-color: #e9ecef; /* Light gray for contrast */
+    padding: 100px 0;
+    text-align: center;
+}
 
-        .hero-content {
-            margin-bottom: 40px;
-            max-width: 700px;
-        }
+#hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        .hero-content h1 {
-            font-size: 3em;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-weight: 700;
-            line-height: 1.2;
-        }
+.hero-content {
+    margin-bottom: 40px;
+    max-width: 700px;
+}
 
-        .hero-content p {
-            font-size: 1.2em;
-            color: #555;
-            margin-bottom: 30px;
-        }
+.hero-content h1 {
+    font-size: 3em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
 
-        .hero-image img {
-            max-width: 50%;
-            height: auto;
-            border-radius: 70px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
+.hero-content p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
 
-       
-       
-        /* --- Footer Styles --- */
-        footer {
-            background-color: #343a40;
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-            font-size: 0.9em;
-            border-top: 1px solid #495057;
-        }
+.hero-image img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 70px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-        footer .container {
-            padding: 20px;
-        }
 
-        /* --- Responsive Styles --- */
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
+/* --- Footer Styles --- */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+    border-top: 1px solid #495057;
+}
 
-            .section-padding {
-                padding: 40px 0;
-            }
+footer .container {
+    padding: 20px;
+}
 
-            .section-title {
-                font-size: 2em;
-                margin-bottom: 30px;
-            }
+/* --- Responsive Styles --- */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
 
-            header .container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+    .section-padding {
+        padding: 40px 0;
+    }
 
-            .logo {
-                margin-bottom: 15px;
-            }
+    .section-title {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
 
-            nav ul {
-                display: none;
-                flex-direction: column;
-                background-color: rgba(52, 58, 64, 0.9); /* Dark background for mobile nav */
-                position: absolute;
-                top: 100%; /* Adjust based on header height */
-                left: 0;
-                right: 0;
-                padding: 10px;
-                border-radius: 0 0 8px 8px;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            }
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-            nav ul.show {
-                display: flex;
-            }
+    .logo {
+        margin-bottom: 15px;
+    }
 
-            nav ul li {
-                margin: 15px 0;
-                margin-left: 0;
-                text-align: center;
-            }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(52, 58, 64, 0.9); /* Dark background for mobile nav */
+        position: absolute;
+        top: 100%; /* Adjust based on header height */
+        left: 0;
+        right: 0;
+        padding: 10px;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
 
-            .hamburger {
-                display: block;
-                position: absolute;
-                top: 20px;
-                right: 20px;
-            }
+    nav ul.show {
+        display: flex;
+    }
 
-            #hero {
-                padding: 80px 0;
-            }
+    nav ul li {
+        margin: 15px 0;
+        margin-left: 0;
+        text-align: center;
+    }
 
-            #hero .container {
-                text-align: center;
-            }
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
 
-            .hero-content h1 {
-                font-size: 2.5em;
-            }
+    #hero {
+        padding: 80px 0;
+    }
 
-            .hero-content p {
-                font-size: 1.1em;
-            }
+    #hero .container {
+        text-align: center;
+    }
 
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
 
-            .contact-info {
-                text-align: center;
-                margin-top: 30px;
-            }
-        }
+    .hero-content p {
+        font-size: 1.1em;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+
     </style>
 </head>
 <body style="background-image: url('Images/E-commerce\ Background.jpg');">
