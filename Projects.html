@@ -1,0 +1,249 @@
+<html lang="en">
+<head>
+    <link rel="icon" href="Images/mk.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muqtasid Khan - E-commerce System Professional</title>
+    <meta name="description" content="Professional portfolio of Muqtasid Khan, an expert in building innovative e-commerce solutions. View my projects and get in touch.">
+    <meta name="keywords" content="e-commerce, portfolio, web development, Muqtasid Khan, projects, contact">
+    <meta name="author" content="Muqtasid Khan">
+    <link rel="canonical" href="https://yourdomain.com/">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Projects Section --- */
+        .projects-section {
+            padding: 60px 0;
+            background-color: #f9f9f9; /* Light background for the whole section */
+        }
+
+        .container {
+            max-width: 1200px; /* Increased max-width for larger screens */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2.8em; /* Larger title */
+            color: #2c3e50;
+            margin-bottom: 50px;
+            text-align: center;
+            font-weight: 700; /* Stronger font weight */
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Increased min-width */
+            gap: 40px; /* Increased gap */
+            margin-bottom: 50px;
+        }
+
+        .project-item {
+            background-color: #fff;
+            border-radius: 12px; /* More rounded corners */
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Refined shadow */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added box-shadow transition */
+            border: 1px solid #eee; /* Subtle border */
+        }
+
+        .project-item:hover {
+            transform: translateY(-8px); /* Increased hover effect */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* Increased shadow on hover */
+        }
+
+        .project-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-top-left-radius: 12px; /* Match container radius */
+            border-top-right-radius: 12px;
+            transition: transform 0.4s ease; /* Add smooth transition */
+        }
+
+        .project-item:hover img {
+            transform: scale(1.04); /* Subtle scale on hover */
+        }
+
+        .project-info {
+            padding: 30px; /* Increased padding */
+        }
+
+        .project-info h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.8em; /* Increased font size */
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.3;
+        }
+
+        .project-info p {
+            color: #666; /* Slightly darker text */
+            font-size: 1.1em; /* Increased font size */
+            line-height: 1.7; /* Improved line height */
+            margin-bottom: 25px; /* Increased margin */
+        }
+
+        .view-more {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            padding: 14px 30px;
+            border-radius: 10px; /* More rounded buttons */
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added box-shadow */
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Added subtle shadow */
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12); /* Increased shadow on hover */
+        }
+
+        .primary-button {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .primary-button:hover {
+            background-color: #0056b3;
+        }
+
+        .secondary-button {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+
+        .secondary-button:hover {
+            background-color: #ccc;
+            color: #333;
+        }
+
+        .small-button {
+            padding: 10px 20px;
+            font-size: 0.9em;
+        }
+
+        .ml-1 {
+            margin-left: 8px;
+        }
+
+        .fas {
+            width: 16px; /* Consistent icon size */
+            height: 16px;
+        }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 1100px;
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            }
+        }
+
+        @media (max-width: 992px) {
+            .section-title {
+                font-size: 2.5em;
+            }
+
+            .projects-grid {
+                gap: 30px;
+            }
+
+            .project-info {
+                padding: 20px;
+            }
+
+            .project-info h3 {
+                font-size: 1.6em;
+            }
+
+            .project-info p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-item {
+                margin-bottom: 30px;
+            }
+
+            .project-item:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section-title {
+                font-size: 2em;
+            }
+
+            .button {
+                font-size: 1em;
+                padding: 12px 25px;
+            }
+
+            .project-info h3 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<section id="projects" class="projects-section">
+    <div class="container">
+        <h2 class="section-title">Recent Projects</h2>
+        <div class="projects-grid">
+            <div class="project-item">
+                <img src="Images/Custom Online Store.jpg" alt="Custom Online Store">
+                <div class="project-info">
+                    <h3>Bespoke E-commerce Platform</h3>
+                    <p>Developed a fully customized online store with integrated payment processing and shipping logistics for a local retailer.</p>
+                    <a href="#" class="button small-button">View Details <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="Images/Inventory Management System.jpg" alt="Inventory Management System">
+                <div class="project-info">
+                    <h3>Scalable Inventory Management System</h3>
+                    <p>Designed and implemented an inventory tracking system to optimize stock levels and reduce operational inefficiencies.</p>
+                    <a href="#" class="button small-button">View Details <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="Images/E-commerce CRM Integration.png" alt="E-commerce CRM Integration">
+                <div class="project-info">
+                    <h3>Customer Engagement CRM for Online Sales</h3>
+                    <p>Integrated a CRM solution to enhance customer interactions, personalize marketing efforts, and improve retention rates.</p>
+                    <a href="#" class="button small-button">View Details <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="view-more">
+            <a href="#" class="button secondary-button">View All Projects <i class="fas fa-eye ml-1"></i></a>
+        </div>
+    </div>
+</section>
+
+</html>

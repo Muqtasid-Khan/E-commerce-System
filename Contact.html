@@ -1,0 +1,307 @@
+<html lang="en">
+<head>
+    <link rel="icon" href="Images/mk.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muqtasid Khan - E-commerce System Professional</title>
+    <meta name="description" content="Professional portfolio of Muqtasid Khan, an expert in building innovative e-commerce solutions. View my projects and get in touch.">
+    <meta name="keywords" content="e-commerce, portfolio, web development, Muqtasid Khan, projects, contact">
+    <meta name="author" content="Muqtasid Khan">
+    <link rel="canonical" href="https://yourdomain.com/">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* --- Contact Section --- */
+.contact-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 3em;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #007bff;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 123, 255, 0.4);
+}
+
+.contact-form {
+    margin-bottom: 60px;
+}
+
+.contact-form form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid #eee;
+}
+
+.contact-form form:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 12px;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1em;
+    letter-spacing: -0.02em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #d4d4d4;
+    border-radius: 8px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info h3 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.contact-info p {
+    color: #666;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    color: #004080;
+    transform: scale(1.05);
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: #555;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    width: 50px;
+    height: 50px;
+}
+
+.social-links a:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+.social-links a i {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1100px;
+    }
+
+    .section-title {
+        font-size: 2.75em;
+    }
+
+    .contact-form form {
+        padding: 40px;
+    }
+
+    .contact-info h3 {
+        font-size: 2em;
+    }
+
+    .contact-info p {
+        font-size: 1.15em;
+    }
+}
+
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 2.5em;
+    }
+
+    .contact-form, .contact-info {
+        margin-bottom: 40px;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.25em;
+    }
+
+    .contact-form form {
+        padding: 30px;
+    }
+
+    .form-group label {
+        font-size: 1em;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        font-size: 1em;
+        padding: 12px;
+    }
+
+    .contact-info h3 {
+        font-size: 1.75em;
+    }
+
+    .contact-info p {
+        font-size: 1.1em;
+    }
+
+    .social-links a {
+        font-size: 1.75em;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 2em;
+    }
+
+    .contact-form form {
+        padding: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .social-links a {
+        font-size: 1.5em;
+        margin: 0 8px;
+    }
+}
+</style>
+</head>
+<body>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="row">
+                <div class="col-md-6 contact-form">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="button primary-button">Send Message <i class="fas fa-paper-plane ml-1"></i></button>
+                    </form>
+                </div>
+                <div class="col-md-6 contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Email:</strong> <a href="muqtasidkhan207@gmail.com">muqtasidkhan207@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+92 3087154709">+92 3087154709</a></p>
+                    <p><strong>Location:</strong> 123 Main Street, Multan, Pakistan</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

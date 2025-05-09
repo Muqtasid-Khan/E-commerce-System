@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="/Images/mk.png" type="image/png"> <meta charset="UTF-8">
+    <link rel="icon" href="Images/mk.png" type="image/png"> <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muqtasid Khan - E-commerce System Professional</title> <meta name="description" content="Professional portfolio of Muqtasid Khan, an expert in building innovative e-commerce solutions. View my projects and get in touch."> <meta name="keywords" content="e-commerce, portfolio, web development, Muqtasid Khan, projects, contact"> <meta name="author" content="Muqtasid Khan"> <link rel="canonical" href="https://yourdomain.com/"> <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -28,70 +28,12 @@
             padding: 20px; /* Consistent padding */
         }
 
-        .section-padding {
-            padding: 60px 0; /* Increased padding for better visual separation */
-        }
-
-        .section-title {
-            font-size: 2.5em;
-            color: #2c3e50; /* Dark, professional heading color */
-            text-align: center;
-            margin-bottom: 40px;
-            font-weight: 700;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background-color: #007bff; /* Accent color for visual interest */
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-            font-weight: 500;
-            font-size: 1em;
-            text-align: center;
-        }
-
-        .primary-button {
-            background-color: #007bff;
-            color: white;
-        }
-
-        .primary-button:hover {
-            background-color: #0056b3;
-        }
-
-        .secondary-button {
-            background-color: #6c757d;
-            color: white;
-        }
-
-        .secondary-button:hover {
-            background-color: #545b62;
-        }
-
-        .small-button {
-            padding: 8px 16px;
-            font-size: 0.9em;
-        }
-
         /* --- Header Styles --- */
         header {
             background-color: #343a40; /* Dark, professional header background */
             color: white;
             padding: 20px 0;
-            position: sticky; /* Sticky header for better navigation */
+           /* position: sticky; /* Sticky header for better navigation */
             top: 0;
             z-index: 100;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -155,7 +97,7 @@
         /* --- Hero Section --- */
         #hero {
             background-color: #e9ecef; /* Light gray for contrast */
-            padding: 80px 0;
+            padding: 100px 0;
             text-align: center;
         }
 
@@ -191,138 +133,8 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        /* --- Projects Section --- */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .project-item {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .project-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .project-info {
-            padding: 20px;
-        }
-
-        .project-info h3 {
-            color: #2c3e50;
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 1.5em;
-            font-weight: 600;
-        }
-
-        .project-info p {
-            color: #555;
-            font-size: 1em;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-
-        .view-more {
-            text-align: center;
-        }
-
-        /* --- Contact Section --- */
-        .contact-form, .contact-info {
-            margin-bottom: 30px;
-        }
-
-        .contact-form form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 30px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: 500;
-        }
-
-        .form-group input[type="text"],
-        .form-group input[type="email"],
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 1em;
-            box-sizing: border-box;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-        }
-
-        .contact-info {
-            text-align: center;
-        }
-
-        .contact-info h3 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-            font-weight: 600;
-        }
-
-        .contact-info p {
-            color: #555;
-            font-size: 1.1em;
-            margin-bottom: 10px;
-        }
-
-        .contact-info a {
-            color: #007bff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-info a:hover {
-            color: #0056b3;
-        }
-
-        .social-links {
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            display: inline-block;
-            font-size: 1.5em;
-            color: #555;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #007bff;
-        }
-
+       
+       
         /* --- Footer Styles --- */
         footer {
             background-color: #343a40;
@@ -427,9 +239,10 @@
         <nav>
             <ul id="nav-links">
                 <li><a href="EstoreHub.html">EstoreHub</a></li> <li>
-                <a href="about.html">About Us</a></li> <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li> </ul>
+                <a href="about.html">About Us</a></li> 
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="Contact.html">Contact</a></li> </ul>
             <div class="hamburger" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </div>
@@ -446,95 +259,6 @@
     </div>
 </section>
 
-<section id="services" class="services section-padding bg-light">
-    <div class="container">
-        <h2 class="section-title">My Expertise</h2> <div class="services-grid">
-            <div class="service-item">
-                <i class="fas fa-code fa-3x mb-2 text-primary"></i> <h3>E-commerce Development</h3>
-                <p>Building scalable and secure online stores tailored to your unique business needs.</p>
-            </div>
-            <div class="service-item">
-                <i class="fas fa-shopping-cart fa-3x mb-2 text-success"></i> <h3>Platform Integration</h3>
-                <p>Seamless integration of payment gateways, shipping providers, and other essential services.</p>
-            </div>
-            <div class="service-item">
-                <i class="fas fa-rocket fa-3x mb-2 text-warning"></i> <h3>Performance Optimization</h3>
-                <p>Ensuring your e-commerce platform is fast, responsive, and optimized for conversions.</p>
-            </div>
-            <div class="service-item">
-                <i class="fas fa-mobile-alt fa-3x mb-2 text-info"></i> <h3>Mobile-First Design</h3>
-                <p>Creating responsive designs that provide an optimal experience across all devices.</p>
-            </div>
-            <div class="service">
-                <i class="fas fa-chart-line fa-3x mb-2 text-danger"></i> <h3>Analytics & Reporting</h3>
-                <p>Implementing tools to track key metrics and provide insights for business growth.</p>
-            </div>
-            <div class="service-item">
-                <i class="fas fa-life-ring fa-3x mb-2 text-secondary"></i> <h3>Ongoing Support & Maintenance</h3>
-                <p>Providing reliable support and maintenance to ensure your platform runs smoothly.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="projects" class="projects section-padding">
-    <div class="container">
-        <h2 class="section-title">Recent Projects</h2>
-        <div class="projects-grid">
-            <div class="project-item">
-                <img src="/images/project1.jpg" alt="Custom Online Store">
-                <div class="project-info">
-                    <h3>Bespoke E-commerce Platform</h3>
-                    <p>Developed a fully customized online store with integrated payment processing and shipping logistics for a local retailer.</p>
-                    <a href="#" class="button small-button">View Details <i class="fas fa-arrow-right ml-1"></i></a>
-                </div>
-            </div>
-            <div class="project-item">
-                <img src="/images/project2.jpg" alt="Inventory Management System">
-                <div class="project-info">
-                    <h3>Scalable Inventory Management System</h3>
-                    <p>Designed and implemented an inventory tracking system to optimize stock levels and reduce operational inefficiencies.</p>
-                    <a href="#" class="button small-button">View Details <i class="fas fa-arrow-right ml-1"></i></a>
-                </div>
-            </div>
-            <div class="project-item">
-                <img src="/images/project3.jpg" alt="E-commerce CRM Integration">
-                <div class="project-info">
-                    <h3>Customer Engagement CRM for Online Sales</h3>
-                    <p>Integrated a CRM solution to enhance customer interactions, personalize marketing efforts, and improve retention rates.</p>
-                    <a href="#" class="button small-button">View Details <i class="fas fa-arrow-right ml-1"></i></a>
-                </div>
-            </div>
-            </div>
-        <div class="view-more">
-            <a href="#" class="button secondary-button">View All Projects <i class="fas fa-eye ml-1"></i></a>
-        </div>
-    </div>
-</section>
-
-<section id="contact" class="contact section-padding bg-light">
-    <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-form">
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="button primary-button">Send Message <i class="fas fa-paper-plane ml-1"></i></button>
-            </form>
-        </div>
-        
-    </div>
-</section>
 
 <footer>
     <div class="container">
